@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+     <script type="text/javascript">
+var array =[1,4,1,1,3];
+var tempcount = 0;
+var maxcount = 0;
+
+
+for (var i = 0;i<=array.length-1;i++) {
+	
+	for (var j=array.length-1;j>=0;j--) {
+	
+		if (array[i] == array[j]) {
+		tempcount = j - i;
+		}
+		
+		if (maxcount < tempcount) {
+		maxcount = tempcount;
+		tempcount = 0;
+		maxcount+=1
+		}
+	}
+}
+
+document.write("<br>" +"the max span is " +maxcount)
+
+
+
+  </script>
+
+</body>
+</html>
